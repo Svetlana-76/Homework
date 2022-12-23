@@ -37,14 +37,15 @@ Console.WriteLine("Введите число");
 int num=Convert.ToInt32(Console.ReadLine());
 int num3=0;
 
-if (num>100)
+if (num>=100)
 {
     while (num>=1000)
     {
-
+        
         num=num/10;
-        num3=num%10;
+       
     }
+    num3=num%10;
     Console.WriteLine(num3);
 }
 else
@@ -64,7 +65,11 @@ else
 Console.WriteLine("Введите число");
 int daynumber=Convert.ToInt32(Console.ReadLine());
 
-if (daynumber<6)
+if (daynumber<=0)
+{
+    Console.WriteLine("Такого дня нет");
+}
+else if (daynumber<6)
 {
     Console.WriteLine("Нет");
 }
