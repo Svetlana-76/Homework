@@ -29,12 +29,12 @@ Console.WriteLine(i);
 
 
 Console.WriteLine("Введите число");
-int numbers1=Convert.ToInt32(Console.ReadLine());
-string num1=Convert.ToString(numbers);
-int sum1=0;
-for (int ind1=0; ind1<num1.Length; ind1++)
+int numbers=Convert.ToInt32(Console.ReadLine());
+string num=Convert.ToString(numbers);
+int sum=0;
+for (int ind=0; ind<num.Length; ind++)
 {
-   sum1=sum1+Convert.ToInt32(num1[ind1].ToString());
+   sum=sum+Convert.ToInt32(num[ind].ToString());
 }
          
 Console.WriteLine(sum);
