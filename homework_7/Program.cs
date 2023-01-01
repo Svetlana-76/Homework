@@ -91,8 +91,8 @@ for (int i = 0; i < numbers.GetLength(0); i++)
             Console.Write(numbers[i,j]+" ");
         }
         
-        Console.WriteLine();
+        
         average=Convert.ToDouble(summ)/Convert.ToDouble(numbers.GetLength(1));
-        Console.WriteLine("Среднее арифметическое: "+average);
+        Console.WriteLine("; Среднее арифметическое: "+average);
     }
    
