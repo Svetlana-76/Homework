@@ -75,24 +75,35 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-int [,] numbers=new int [4,4];
+Console.WriteLine("Введите число строк");
+int m=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число столбцов");
+int n=Convert.ToInt32(Console.ReadLine());
+int [,] numbers=new int[m,n];
 
 
-
-for (int i = 0; i < numbers.GetLength(0); i++)
+    for (int i = 0; i < numbers.GetLength(0); i++)
     {
-        double average=0;
-        int summ=0;
         for (int j  = 0; j < numbers.GetLength(1); j++)
         {
-            
             numbers[i,j]=Convert.ToInt32(new Random().Next(100));
-            summ=summ+numbers[i,j];
             Console.Write(numbers[i,j]+" ");
         }
-        
-        
-        average=Convert.ToDouble(summ)/Convert.ToDouble(numbers.GetLength(1));
-        Console.WriteLine("; Среднее арифметическое: "+average);
+    
+    Console.WriteLine();
     }
-   
+     Console.Write("Среднее арифметическое каждого столбца: ");
+
+    for (int j = 0; j < numbers.GetLength(1); j++)
+    {
+        double average=0;
+       
+        for (int i  = 0; i < numbers.GetLength(0); i++)
+        {
+            average=average+numbers[i,j];
+        }
+        average=average/m;
+        
+        Console.Write(average+";  ");
+    }
+    
